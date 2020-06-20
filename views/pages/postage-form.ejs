@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../partials/header.ejs %>
+    </head>
+    <body>
+        <h1>Postal Rate Calculator</h1>
+        <form action="/postage" method="get" id="postalRateForm">
+            <label for="mailWeight">Mail Weight in Ounces: </label>
+            <input type="text" name="mailWeight" id="mailWeight">
+            <br>
+            <br>
+            <label for="mailType">Mail Type</label>
+            <select name="mailType" id="mailType">
+                <option value="lettersStamped">Letters (stamped)</option>
+                <option value="lettersMetered">Letters (metered)</option>
+                <option value="envelopesLarge">Large Envelopes (Flats)</option>
+                <option value="firstClassPackage">First-Class Package Service - Retail</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Get Rate">
+        </form>
+        <script></script>
+    </body>
+</html>

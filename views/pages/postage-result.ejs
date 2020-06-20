@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../partials/header.ejs %>
+    </head>
+    <body>
+        <h1>Postal Rate Calculator</h1>
+        <% if (result.length > 4 ) { %>
+            <%= result %>
+        <% } else { %>
+            <p>Your <%= mail_weight %> oz. 
+                <% if (mail_type == 'lettersStamped') { %>
+                    stamped letter 
+                <% } else if (mail_type == 'lettersMetered') { %>
+                    metered letter 
+                <% } else if (mail_type == 'envelopesLarge') { %>
+                    large envelope 
+                <% } else if (mail_type == 'firstClassPackage') { %>
+                    first class package 
+                <% } %>
+            will cost: $<%= result %> to send.</p>
+        <% } %>
+    </body>
+</html>
